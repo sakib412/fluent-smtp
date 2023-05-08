@@ -72,12 +72,12 @@
                 <el-checkbox v-model="settings.misc.auto_retry" true-label="yes" false-label="no">
                     Enable auto retry on fail
                 </el-checkbox>
-                <p style="color: red;" v-if="settings.misc.auto_retry == 'yes'">
+                <!-- <p style="color: red;" v-if="settings.misc.auto_retry == 'yes'">
                     <el-input-number default="1" v-model="settings.misc.auto_retry_limit" size="small" :min="1" :max="10"
                         :step="1" label="How many times to retry">
                         How many times to retry
                     </el-input-number>
-                </p>
+                </p> -->
             </el-form-item>
 
             <el-button v-loading="saving" @click="saveMiscSettings()" type="success">{{ $t('Save Settings') }}</el-button>
